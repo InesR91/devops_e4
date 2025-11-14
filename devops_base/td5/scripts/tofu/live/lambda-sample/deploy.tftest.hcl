@@ -18,8 +18,8 @@ run "validate" {
     error_message = "Unexpected status: ${data.http.test_endpoint.status_code}"
   }
 
-  assert {
-    condition     = data.http.test_endpoint.response_body == "Fundamentals of DevOps!"
+   assert {
+    condition = data.http.test_endpoint.response_body == "Fundamentals of DevOps!"
     error_message = "Unexpected body: ${data.http.test_endpoint.response_body}"
   }
 }
